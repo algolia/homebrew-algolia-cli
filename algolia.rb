@@ -10,110 +10,45 @@ class Algolia < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_macOS_amd64.tar.gz"
-      sha256 "0b11bd36f758ead30f8d706c2a7e60ce220f48c6ce771ac8b90254c34e4e218a"
+      sha256 "b00f88323e483a98477c22415175bcbf3b781c00d009b448cafc202eaf460106"
 
       def install
         bin.install "algolia"
-        rm Dir["#{bin}/{algolia-completion.bash,algolia-completion.zsh}"]
-        system bin/"algolia", "completion", "bash"
-        system bin/"algolia", "completion", "zsh"
-        bash_completion.install "algolia-completion.bash"
-        zsh_completion.install "algolia-completion.zsh"
-        (zsh_completion/"_algolia").write <<~EOS
-          #compdef algolia
-          _algolia () {
-            local e
-            e=$(dirname ${funcsourcetrace[1]%:*})/algolia-completion.zsh
-            if [[ -f $e ]]; then source $e; fi
-          }
-        EOS
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_macOS_arm64.tar.gz"
-      sha256 "56a26440943aacd6c097916d62234bfcdfe8230ccef04d210356366399e6b57a"
+      sha256 "00c6701668713d9cff563786457ee9583c2fa7461f6ebca4022eeb20d8957eff"
 
       def install
         bin.install "algolia"
-        rm Dir["#{bin}/{algolia-completion.bash,algolia-completion.zsh}"]
-        system bin/"algolia", "completion", "bash"
-        system bin/"algolia", "completion", "zsh"
-        bash_completion.install "algolia-completion.bash"
-        zsh_completion.install "algolia-completion.zsh"
-        (zsh_completion/"_algolia").write <<~EOS
-          #compdef algolia
-          _algolia () {
-            local e
-            e=$(dirname ${funcsourcetrace[1]%:*})/algolia-completion.zsh
-            if [[ -f $e ]]; then source $e; fi
-          }
-        EOS
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_linux_armv6.tar.gz"
-      sha256 "34c9797f78b995a6be41e094b2ee5cb59492ca9f79bbad0f261e168026fdf5a6"
-
-      def install
-        bin.install "algolia"
-        rm Dir["#{bin}/{algolia-completion.bash,algolia-completion.zsh}"]
-        system bin/"algolia", "completion", "bash"
-        system bin/"algolia", "completion", "zsh"
-        bash_completion.install "algolia-completion.bash"
-        zsh_completion.install "algolia-completion.zsh"
-        (zsh_completion/"_algolia").write <<~EOS
-          #compdef algolia
-          _algolia () {
-            local e
-            e=$(dirname ${funcsourcetrace[1]%:*})/algolia-completion.zsh
-            if [[ -f $e ]]; then source $e; fi
-          }
-        EOS
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_linux_arm64.tar.gz"
-      sha256 "dcb3f4297b30ee17052c277b3f54f54c0a0930c521c163a0c050236db2a57074"
+      sha256 "258dd761ec2edb275d3d69973b3a6bfbc1e2b6c5254da4da3e338449b21f5dd9"
 
       def install
         bin.install "algolia"
-        rm Dir["#{bin}/{algolia-completion.bash,algolia-completion.zsh}"]
-        system bin/"algolia", "completion", "bash"
-        system bin/"algolia", "completion", "zsh"
-        bash_completion.install "algolia-completion.bash"
-        zsh_completion.install "algolia-completion.zsh"
-        (zsh_completion/"_algolia").write <<~EOS
-          #compdef algolia
-          _algolia () {
-            local e
-            e=$(dirname ${funcsourcetrace[1]%:*})/algolia-completion.zsh
-            if [[ -f $e ]]; then source $e; fi
-          }
-        EOS
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_linux_armv6.tar.gz"
+      sha256 "442f51431cb225cd09eaad29271e79b2b6d01b870a514d94c3b3cb64fde943d6"
+
+      def install
+        bin.install "algolia"
       end
     end
     if Hardware::CPU.intel?
       url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_linux_amd64.tar.gz"
-      sha256 "725974780137cdb270acfbefd606da1e5b149de15bf0e802d6a665560c521014"
+      sha256 "a8d98b9b162faef4e7f41f1603be1612d7a7cd9b107e3357cbe46c6cd5c0596e"
 
       def install
         bin.install "algolia"
-        rm Dir["#{bin}/{algolia-completion.bash,algolia-completion.zsh}"]
-        system bin/"algolia", "completion", "bash"
-        system bin/"algolia", "completion", "zsh"
-        bash_completion.install "algolia-completion.bash"
-        zsh_completion.install "algolia-completion.zsh"
-        (zsh_completion/"_algolia").write <<~EOS
-          #compdef algolia
-          _algolia () {
-            local e
-            e=$(dirname ${funcsourcetrace[1]%:*})/algolia-completion.zsh
-            if [[ -f $e ]]; then source $e; fi
-          }
-        EOS
       end
     end
   end
