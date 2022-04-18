@@ -10,7 +10,7 @@ class Algolia < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_macOS_amd64.tar.gz"
-      sha256 "b00f88323e483a98477c22415175bcbf3b781c00d009b448cafc202eaf460106"
+      sha256 "590207f0f1602d1ace98c29283aa42eece311401dabddf83af2cf9e9fdbb535a"
 
       def install
         bin.install "algolia"
@@ -18,7 +18,7 @@ class Algolia < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_macOS_arm64.tar.gz"
-      sha256 "00c6701668713d9cff563786457ee9583c2fa7461f6ebca4022eeb20d8957eff"
+      sha256 "ce24dc90668958661f019e07c305a3b5c193d6c62a9f5eade204a99ffd5e8955"
 
       def install
         bin.install "algolia"
@@ -29,7 +29,7 @@ class Algolia < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_linux_arm64.tar.gz"
-      sha256 "258dd761ec2edb275d3d69973b3a6bfbc1e2b6c5254da4da3e338449b21f5dd9"
+      sha256 "46837a2f6c8eaad791fc67240b4629f5426c1c2d953ec5c3db32093f25a95dcd"
 
       def install
         bin.install "algolia"
@@ -37,7 +37,7 @@ class Algolia < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_linux_armv6.tar.gz"
-      sha256 "442f51431cb225cd09eaad29271e79b2b6d01b870a514d94c3b3cb64fde943d6"
+      sha256 "f80d9a02284f1445a1526cfc6d2ccdeefce6944c77cd3dcd4565692173f65a64"
 
       def install
         bin.install "algolia"
@@ -45,7 +45,7 @@ class Algolia < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_linux_amd64.tar.gz"
-      sha256 "a8d98b9b162faef4e7f41f1603be1612d7a7cd9b107e3357cbe46c6cd5c0596e"
+      sha256 "d1805f01c24a302fa3101fb55b59ca3ce5e7d80f90e0ee0098919b5d9b7975d4"
 
       def install
         bin.install "algolia"
