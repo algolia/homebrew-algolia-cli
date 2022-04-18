@@ -5,13 +5,13 @@
 class Algolia < Formula
   desc "Algolia CLI utility"
   homepage "https://algolia.com"
-  version "0.0.2-alpha"
+  version "1.0.0-beta"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/algolia/cli/releases/download/v0.0.2-alpha/algolia_0.0.2-alpha_mac-os_arm64.tar.gz"
-      sha256 "7e946eafb1dcd1e437dd6e053684a9ca0f478b350969641ae264bccfc6c17364"
+      url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_mac-os_arm64.tar.gz"
+      sha256 "cee14f47c4d7854051e42631c6a676b6c5aade58d9d350e9d801b2e7c0ebaeb5"
 
       def install
         bin.install "algolia"
@@ -31,8 +31,8 @@ class Algolia < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/algolia/cli/releases/download/v0.0.2-alpha/algolia_0.0.2-alpha_mac-os_x86_64.tar.gz"
-      sha256 "8698a349270d2f1802371d24c8ab553be1c4c6d2495a571d207522a39c011422"
+      url "https://github.com/algolia/cli/releases/download/v1.0.0-beta/algolia_1.0.0-beta_mac-os_x86_64.tar.gz"
+      sha256 "becebe416aa772cf21f7f42ea9adbcb55d5466343db4b725c35bb2f34b966c19"
 
       def install
         bin.install "algolia"
