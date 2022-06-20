@@ -5,20 +5,20 @@
 class Algolia < Formula
   desc "Algolia CLI utility"
   homepage "https://www.algolia.com"
-  version "1.0.2-beta"
+  version "1.0.3-beta"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/algolia/cli/releases/download/v1.0.2-beta/algolia_1.0.2-beta_macOS_amd64.tar.gz"
-      sha256 "29555163a823efed7319b7f491a8d532660bd82822d9ba1ef6c17074549e6cec"
+      url "https://github.com/algolia/cli/releases/download/v1.0.3-beta/algolia_1.0.3-beta_macOS_amd64.tar.gz"
+      sha256 "0f0e72d65a9a278befa92f08c5b60822651ba43f6e015caae975266cfdbfb4ce"
 
       def install
         bin.install "algolia"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/algolia/cli/releases/download/v1.0.2-beta/algolia_1.0.2-beta_macOS_arm64.tar.gz"
-      sha256 "1647fe02ddb6296717d51bffde46f92134c59490bd245f525c4d92489b23e2ce"
+      url "https://github.com/algolia/cli/releases/download/v1.0.3-beta/algolia_1.0.3-beta_macOS_arm64.tar.gz"
+      sha256 "3ebb1c45959e2202e3604a20cd74b18492487de763d1d76f50a676e4b4a0124e"
 
       def install
         bin.install "algolia"
@@ -28,24 +28,24 @@ class Algolia < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/algolia/cli/releases/download/v1.0.2-beta/algolia_1.0.2-beta_linux_armv6.tar.gz"
-      sha256 "f4c84eda804f47eedfa570462dd5ff932a32a8e697c56097cda0f99e77a4cf61"
+      url "https://github.com/algolia/cli/releases/download/v1.0.3-beta/algolia_1.0.3-beta_linux_armv6.tar.gz"
+      sha256 "259feddf252ee6a98ff0f554a54131f72ea1145e7a3222f7d7fd9d1856864fbb"
 
       def install
         bin.install "algolia"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/algolia/cli/releases/download/v1.0.2-beta/algolia_1.0.2-beta_linux_arm64.tar.gz"
-      sha256 "df54f2d7ebf1e9843260d3a8e62ba7f46d6b616f1e1d0d20184767b4f08f7778"
+      url "https://github.com/algolia/cli/releases/download/v1.0.3-beta/algolia_1.0.3-beta_linux_arm64.tar.gz"
+      sha256 "345146c35c6284c5ee8def59a292108b5c41cf9222d75ad02bf71383598a670f"
 
       def install
         bin.install "algolia"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/algolia/cli/releases/download/v1.0.2-beta/algolia_1.0.2-beta_linux_amd64.tar.gz"
-      sha256 "c0ab6b18e82c29264cc682e29b47803f3f113c4c3af8c73131a9cb84bb4af573"
+      url "https://github.com/algolia/cli/releases/download/v1.0.3-beta/algolia_1.0.3-beta_linux_amd64.tar.gz"
+      sha256 "11a797546cec4da97326093ecc650b45987d62f9c0bf9382d111958a92163877"
 
       def install
         bin.install "algolia"
