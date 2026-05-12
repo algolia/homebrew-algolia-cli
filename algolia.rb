@@ -5,12 +5,12 @@
 class Algolia < Formula
   desc "Algolia CLI utility"
   homepage "https://www.algolia.com"
-  version "1.8.2"
+  version "1.8.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/algolia/cli/releases/download/v1.8.2/algolia_1.8.2_macOS_amd64.tar.gz"
-      sha256 "3e24a608cd2007f702a5285f5e71998d6660962269c56cd7ba7ebe1d2639c829"
+      url "https://github.com/algolia/cli/releases/download/v1.8.3/algolia_1.8.3_macOS_amd64.tar.gz"
+      sha256 "a9eaec2cca40a21402cf0804f90b4e96ae743ebea22275d287abb8047e49ff39"
 
       define_method(:install) do
         bin.install "algolia"
@@ -20,8 +20,8 @@ class Algolia < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/algolia/cli/releases/download/v1.8.2/algolia_1.8.2_macOS_arm64.tar.gz"
-      sha256 "4ce4be60c7bc7112b59ad56a6c1ec41bb40ea0a9270dc6bc0908557fffae9079"
+      url "https://github.com/algolia/cli/releases/download/v1.8.3/algolia_1.8.3_macOS_arm64.tar.gz"
+      sha256 "4bb23393bfacccc51a4b2a9fa1ca8b4621fb2bcb9d0dbbb0781bc13c87ca9142"
 
       define_method(:install) do
         bin.install "algolia"
@@ -34,8 +34,8 @@ class Algolia < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/algolia/cli/releases/download/v1.8.2/algolia_1.8.2_linux_amd64.tar.gz"
-      sha256 "f381aa5f9f2e704d58fc45319d4e9fa22593ec05bdeff2d950de3648517545e6"
+      url "https://github.com/algolia/cli/releases/download/v1.8.3/algolia_1.8.3_linux_amd64.tar.gz"
+      sha256 "10863889f1b0984fc2204c046dbc149501707393e65be26491ff348abf166ec5"
       define_method(:install) do
         bin.install "algolia"
         bash_completion.install "completions/algolia.bash" => "algolia"
@@ -44,8 +44,8 @@ class Algolia < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/algolia/cli/releases/download/v1.8.2/algolia_1.8.2_linux_armv6.tar.gz"
-      sha256 "3a85637ce6785f0d30b0ca6ebb856048eedb083d5dcef2a24d2145cdc1613cef"
+      url "https://github.com/algolia/cli/releases/download/v1.8.3/algolia_1.8.3_linux_armv6.tar.gz"
+      sha256 "060dc2f7d3af8a0dccb7265319c494ceedd0633b5fc9246eb658f33b876d29e3"
       define_method(:install) do
         bin.install "algolia"
         bash_completion.install "completions/algolia.bash" => "algolia"
@@ -54,8 +54,8 @@ class Algolia < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/algolia/cli/releases/download/v1.8.2/algolia_1.8.2_linux_arm64.tar.gz"
-      sha256 "173256f045334696cc48931b7a4b359ea5f7bfefd37f4f3d0f2181c45c160edb"
+      url "https://github.com/algolia/cli/releases/download/v1.8.3/algolia_1.8.3_linux_arm64.tar.gz"
+      sha256 "a76a0482e971aa1f51a011a4dc9c4f4b5f69db68b367cb2a97d860bcef2cf89e"
       define_method(:install) do
         bin.install "algolia"
         bash_completion.install "completions/algolia.bash" => "algolia"
